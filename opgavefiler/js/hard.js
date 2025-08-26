@@ -1,16 +1,38 @@
 /* opgave 1 */
+console.group('opgave 1');
 
+const todoApp = {
+  shopping: {
+    name: 'Indkøb',
+    items: [
+      { text: 'Køb mælk', done: false },
+      { text: 'Køb brød', done: true },
+    ],
+  },
+  school: {
+    name: 'Skolearbejde',
+    items: [
+      { text: 'Læs kapitel 3', done: false },
+      { text: 'Skriv rapport', done: false },
+    ],
+  },
+};
 
-
-console.group("opgave 1");
+console.log(todoApp);
 
 console.groupEnd();
 /* opgave 2 */
-console.group("opgave 2");
-
-
-
+console.group('opgave 2');
+function addItem(listKey, itemText) {
+  const list = todoApp[listKey];
+  if (list) {
+    const newItem = { text: itemText, done: false };
+    list.items.push(newItem);
+  }
+}
+console.log(todoApp);
+addItem('shopping', 'Køb smør');
 console.groupEnd();
 /* opgave 3 */
-console.group("opgave 3");
+console.group('opgave 3');
 console.groupEnd();
